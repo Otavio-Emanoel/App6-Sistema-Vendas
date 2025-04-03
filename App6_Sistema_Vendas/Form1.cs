@@ -12,6 +12,8 @@ namespace App6_Sistema_Vendas
 {
     public partial class Form1 : Form
     {
+        private List<Produto> produtos = new List<Produto>();
+
         public Form1()
         {
             InitializeComponent();
@@ -20,16 +22,74 @@ namespace App6_Sistema_Vendas
         private void CadastrarBtn_Click(object sender, EventArgs e)
         {
             string nomeProduto = nomeProdutoTxt.Text;
-            double precoProduto = Convert.ToDouble(precoProdutoTxt.Text);
+            decimal precoProduto = Convert.ToDecimal(precoProdutoTxt.Text);
             int quantidadeProduto = Convert.ToInt32(qntdProdutoTxt.Text);
 
-            double valorTotal = precoProduto * quantidadeProduto;
+            if (!decimal.TryParse(precoProdutoTxt.Text, out precoProduto))
+            {
+                MessageBox.Show("Preço inválido.");
+                return;
+            }
 
-            MessageBox.Show(nomeProduto + "\n" + precoProduto + "\n" + quantidadeProduto + "\n" + valorTotal);
+            Produto novoProduto = new Produto(nomeProduto, precoProduto, quantidadeProduto);
+            
+            produtos.Add(novoProduto);
 
-            string[] produtos = { };
+            AtualizarExibicaoProdutos();
 
+            nomeProdutoTxt.Text = "";
+            precoProdutoTxt.Text = "";
+            qntdProdutoTxt.Text = "";
+
+
+        }
+
+        private void  AtualizarExibicaoProdutos()
+        {
+            pnlProdutos.Controls.Clear();
+
+            int yPosition = 10;
+            foreach (var produto in produtos)
+            {
+                Label lblProduto = new Label
+                {
+                    Text = $"{produto.Nome} - R${produto.Preco:F2} - Quantidade: {produto.Quantidade} - Valor Total R${produto.ValorTotal:F2}",
+                    Location = new Point(10, yPosition),
+                    AutoSize = true
+                };
+                pnlProdutos.Controls.Add(lblProduto);
+                yPosition += 25;
+            }
+        }
+
+        private void LimparBtn_Click(object sender, EventArgs e)
+        {
+            produtos.Clear();
+            AtualizarExibicaoProdutos();
+        }
+
+        private void SairBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Obrigado por utilizar nosso Programa!");
+            Close();
+        }
+    }
+
+    public class Produto
+    {
+        public string Nome {get; set; }
+        public decimal Preco { get; set; }
+        public int Quantidade { get; set; }
+        public decimal ValorTotal { get; set; }
+
+        public Produto(string nome, decimal preco, int quantidade)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+            ValorTotal = preco * quantidade;
 
         }
     }
 }
+

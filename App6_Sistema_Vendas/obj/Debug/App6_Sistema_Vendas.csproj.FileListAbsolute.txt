@@ -8,3 +8,13 @@ C:\Users\Aluno\source\repos\App6_Sistema_Vendas\App6_Sistema_Vendas\obj\Debug\Ap
 C:\Users\Aluno\source\repos\App6_Sistema_Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.csproj.CoreCompileInputs.cache
 C:\Users\Aluno\source\repos\App6_Sistema_Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.exe
 C:\Users\Aluno\source\repos\App6_Sistema_Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.pdb
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\bin\Debug\App6_Sistema_Vendas.exe.config
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\bin\Debug\App6_Sistema_Vendas.exe
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\bin\Debug\App6_Sistema_Vendas.pdb
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.csprojAssemblyReference.cache
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.Form1.resources
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.Properties.Resources.resources
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.csproj.GenerateResource.cache
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.exe
+C:\Users\Aluno\Source\Repos\App6-Sistema-Vendas\App6_Sistema_Vendas\obj\Debug\App6_Sistema_Vendas.pdb

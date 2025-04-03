@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nomeProdutoTxt = new System.Windows.Forms.TextBox();
-            this.precoProdutoTxt = new System.Windows.Forms.TextBox();
-            this.qntdProdutoTxt = new System.Windows.Forms.TextBox();
-            this.cadastrarBtn = new System.Windows.Forms.Button();
-            this.limparBtn = new System.Windows.Forms.Button();
-            this.sairBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlProdutos = new System.Windows.Forms.Panel();
+            this.sairBtn = new System.Windows.Forms.Button();
+            this.limparBtn = new System.Windows.Forms.Button();
+            this.cadastrarBtn = new System.Windows.Forms.Button();
+            this.qntdProdutoTxt = new System.Windows.Forms.TextBox();
+            this.precoProdutoTxt = new System.Windows.Forms.TextBox();
+            this.nomeProdutoTxt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pnlProdutos);
             this.panel1.Controls.Add(this.sairBtn);
             this.panel1.Controls.Add(this.limparBtn);
             this.panel1.Controls.Add(this.cadastrarBtn);
@@ -60,26 +60,65 @@
             this.panel1.Size = new System.Drawing.Size(760, 464);
             this.panel1.TabIndex = 0;
             // 
-            // nomeProdutoTxt
+            // label3
             // 
-            this.nomeProdutoTxt.Location = new System.Drawing.Point(3, 50);
-            this.nomeProdutoTxt.Name = "nomeProdutoTxt";
-            this.nomeProdutoTxt.Size = new System.Drawing.Size(306, 20);
-            this.nomeProdutoTxt.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 181);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Quantidade ";
             // 
-            // precoProdutoTxt
+            // label2
             // 
-            this.precoProdutoTxt.Location = new System.Drawing.Point(3, 122);
-            this.precoProdutoTxt.Name = "precoProdutoTxt";
-            this.precoProdutoTxt.Size = new System.Drawing.Size(306, 20);
-            this.precoProdutoTxt.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 18);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Preço Unitário";
             // 
-            // qntdProdutoTxt
+            // label1
             // 
-            this.qntdProdutoTxt.Location = new System.Drawing.Point(4, 202);
-            this.qntdProdutoTxt.Name = "qntdProdutoTxt";
-            this.qntdProdutoTxt.Size = new System.Drawing.Size(305, 20);
-            this.qntdProdutoTxt.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 18);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nome do Produto";
+            // 
+            // pnlProdutos
+            // 
+            this.pnlProdutos.BackColor = System.Drawing.SystemColors.Window;
+            this.pnlProdutos.Location = new System.Drawing.Point(405, 37);
+            this.pnlProdutos.Name = "pnlProdutos";
+            this.pnlProdutos.Size = new System.Drawing.Size(321, 393);
+            this.pnlProdutos.TabIndex = 6;
+            // 
+            // sairBtn
+            // 
+            this.sairBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.sairBtn.Location = new System.Drawing.Point(234, 285);
+            this.sairBtn.Name = "sairBtn";
+            this.sairBtn.Size = new System.Drawing.Size(75, 23);
+            this.sairBtn.TabIndex = 5;
+            this.sairBtn.Text = "Sair";
+            this.sairBtn.UseVisualStyleBackColor = false;
+            this.sairBtn.Click += new System.EventHandler(this.SairBtn_Click);
+            // 
+            // limparBtn
+            // 
+            this.limparBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.limparBtn.Location = new System.Drawing.Point(116, 284);
+            this.limparBtn.Name = "limparBtn";
+            this.limparBtn.Size = new System.Drawing.Size(75, 23);
+            this.limparBtn.TabIndex = 4;
+            this.limparBtn.Text = "Limpar";
+            this.limparBtn.UseVisualStyleBackColor = false;
+            this.limparBtn.Click += new System.EventHandler(this.LimparBtn_Click);
             // 
             // cadastrarBtn
             // 
@@ -92,63 +131,26 @@
             this.cadastrarBtn.UseVisualStyleBackColor = false;
             this.cadastrarBtn.Click += new System.EventHandler(this.CadastrarBtn_Click);
             // 
-            // limparBtn
+            // qntdProdutoTxt
             // 
-            this.limparBtn.BackColor = System.Drawing.SystemColors.Window;
-            this.limparBtn.Location = new System.Drawing.Point(116, 284);
-            this.limparBtn.Name = "limparBtn";
-            this.limparBtn.Size = new System.Drawing.Size(75, 23);
-            this.limparBtn.TabIndex = 4;
-            this.limparBtn.Text = "Limpar";
-            this.limparBtn.UseVisualStyleBackColor = false;
+            this.qntdProdutoTxt.Location = new System.Drawing.Point(4, 202);
+            this.qntdProdutoTxt.Name = "qntdProdutoTxt";
+            this.qntdProdutoTxt.Size = new System.Drawing.Size(305, 20);
+            this.qntdProdutoTxt.TabIndex = 2;
             // 
-            // sairBtn
+            // precoProdutoTxt
             // 
-            this.sairBtn.BackColor = System.Drawing.SystemColors.Window;
-            this.sairBtn.Location = new System.Drawing.Point(234, 285);
-            this.sairBtn.Name = "sairBtn";
-            this.sairBtn.Size = new System.Drawing.Size(75, 23);
-            this.sairBtn.TabIndex = 5;
-            this.sairBtn.Text = "Sair";
-            this.sairBtn.UseVisualStyleBackColor = false;
+            this.precoProdutoTxt.Location = new System.Drawing.Point(3, 122);
+            this.precoProdutoTxt.Name = "precoProdutoTxt";
+            this.precoProdutoTxt.Size = new System.Drawing.Size(306, 20);
+            this.precoProdutoTxt.TabIndex = 1;
             // 
-            // panel2
+            // nomeProdutoTxt
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Location = new System.Drawing.Point(405, 37);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 393);
-            this.panel2.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 18);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nome do Produto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Preço Unitário";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 181);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Quantidade ";
+            this.nomeProdutoTxt.Location = new System.Drawing.Point(3, 50);
+            this.nomeProdutoTxt.Name = "nomeProdutoTxt";
+            this.nomeProdutoTxt.Size = new System.Drawing.Size(306, 20);
+            this.nomeProdutoTxt.TabIndex = 0;
             // 
             // Form1
             // 
@@ -173,7 +175,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlProdutos;
         private System.Windows.Forms.Button sairBtn;
         private System.Windows.Forms.Button limparBtn;
         private System.Windows.Forms.Button cadastrarBtn;
